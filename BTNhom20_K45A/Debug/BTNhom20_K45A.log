@@ -1,0 +1,7 @@
+﻿  Project4.cpp
+D:\ti\CTDL\BTNhom20_K45A\BTNhom20_K45A\Project4.cpp(20,51): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+D:\ti\CTDL\BTNhom20_K45A\BTNhom20_K45A\Project4.cpp(23,35): warning C4018: '<': signed/unsigned mismatch
+D:\ti\CTDL\BTNhom20_K45A\BTNhom20_K45A\Project4.cpp(24,55): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+D:\ti\CTDL\BTNhom20_K45A\BTNhom20_K45A\Project4.cpp(30,51): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+D:\ti\CTDL\BTNhom20_K45A\BTNhom20_K45A\Project4.cpp(40,38): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+  BTNhom20_K45A.vcxproj -> D:\ti\CTDL\BTNhom20_K45A\Debug\BTNhom20_K45A.exe

@@ -1,0 +1,54 @@
+Ma hang: H2
+Ten hang: May Tinh
+Noi san xuat: Viet Nam
+Mau sac: Den
+Gia ban: 20000
+Ngay nhap kho: 2020/10/24
+So luong hien thi: 78
+So luong ton kho: 78
+
+Ma hang: H3
+Ten hang: Tiramysa
+Noi san xuat: Viet Nam
+Mau sac: Den
+Gia ban: 2000.5
+Ngay nhap kho: 2020/10/24
+So luong hien thi: 60
+So luong ton kho: 60
+
+Ma hang: H4
+Ten hang: But chi
+Noi san xuat: Viet Nam
+Mau sac: Xanh
+Gia ban: 4000
+Ngay nhap kho: 2020/10/24
+So luong hien thi: 48
+So luong ton kho: 48
+
+Ma hang: H5
+Ten hang: Dien thoai
+Noi san xuat: Viet Nam
+Mau sac: Tim
+Gia ban: 25000
+Ngay nhap kho: 2020/10/23
+So luong hien thi: 18
+So luong ton kho: 18
+
+Ma hang: H6
+Ten hang: Bang keo
+Noi san xuat: Viet Nam
+Mau sac: Trang
+Gia ban: 30000
+Ngay nhap kho: 2020/11/8
+So luong hien thi: 70
+So luong ton kho: 70
+
+Ma hang: H7
+Ten hang: abcxyz
+Noi san xuat: Anh
+Mau sac: Tim
+Gia ban: 900
+Ngay nhap kho: 2020/11/8
+So luong hien thi: 117
+So luong ton kho: 117
+
