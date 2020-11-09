@@ -4,8 +4,8 @@ Noi san xuat: Viet Nam
 Mau sac: Den
 Gia ban: 20000
 Ngay nhap kho: 2020/10/24
-So luong hien thi: 78
-So luong ton kho: 78
+So luong hien thi: 40
+So luong ton kho: 40
 
 Ma hang: H3
 Ten hang: Tiramysa
@@ -13,8 +13,8 @@ Noi san xuat: Viet Nam
 Mau sac: Den
 Gia ban: 2000.5
 Ngay nhap kho: 2020/10/24
-So luong hien thi: 60
-So luong ton kho: 60
+So luong hien thi: 33
+So luong ton kho: 33
 
 Ma hang: H4
 Ten hang: But chi

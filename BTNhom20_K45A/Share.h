@@ -110,14 +110,6 @@ bool editQuantitySaving(int nHH, HangHoa* hangHoa, string maHang, int soLuong) {
 	return false;
 }
 
-void SetColor(int backgound_color, int text_color)
-{
-	HANDLE hStdout = GetStdHandle(STD_OUTPUT_HANDLE);
-
-	int color_code = backgound_color * 16 + text_color;
-	SetConsoleTextAttribute(hStdout, color_code);
-}
-
 //t = 1: Main Menu
 //t = 2: Manage Menu
 //t = 3: Sub Manage Menu
@@ -174,16 +166,16 @@ void focusChoose(int currentChoose, int k, int t) {
 	}
 	cout << setw(22) << "*";
 	if (currentChoose == k) {
-		SetColor(6, 0);
+		SetColor(9, 0);
 	}
 	cout << setw(27) << mess;
-	SetColor(0, 14);
+	SetColor(0, 11);
 	cout << "*" << endl;
 }
 void showMainMenu(int k) {
 	system("cls");
 	cout << "\n\n";
-	SetColor(0, 14);
+	SetColor(0, 11);
 	cout << setw(57) << right << "|----------> MENU CHINH <---------|\n\n\n";
 
 	cout << setw(21) << "" << setfill('*') << setw(31) << "*" << setfill(' ') << endl;
@@ -194,12 +186,12 @@ void showMainMenu(int k) {
 
 	cout << setw(21) << "" << setfill('*') << setw(31) << "*" << setfill(' ') << endl;
 	cout << "\n\n\n";
-	SetColor(0, 7);
+	SetColor(0, 11);
 }
 void showManageMenu(int k) {
 	system("cls");
 	cout << "\n\n";
-	SetColor(0, 14);
+	SetColor(0, 11);
 	cout << setw(58) << right << "|----------> MENU QUAN LY <---------|\n\n\n";
 
 	cout << setw(21) << "" << setfill('*') << setw(31) << "*" << setfill(' ') << endl;
@@ -210,13 +202,13 @@ void showManageMenu(int k) {
 
 	cout << setw(21) << "" << setfill('*') << setw(31) << "*" << setfill(' ') << endl;
 	cout << "\n\n\n";
-	SetColor(0, 7);
+	SetColor(0, 11);
 }
 void showSubManageMenu(int k) {
 	system("cls");
 	cout << "\n\n";
-	SetColor(0, 14);
-	cout << setw(58) << right << "|----------> MENU CON QUAN LY <---------|\n\n\n";
+	SetColor(0, 11);
+	cout << setw(60) << right << "|----------> MENU CON QUAN LY <---------|\n\n\n";
 
 	cout << setw(21) << "" << setfill('*') << setw(31) << "*" << setfill(' ') << endl;
 
@@ -226,7 +218,7 @@ void showSubManageMenu(int k) {
 
 	cout << setw(21) << "" << setfill('*') << setw(31) << "*" << setfill(' ') << endl;
 	cout << "\n\n\n";
-	SetColor(0, 7);
+	SetColor(0, 11);
 }
 void showWarning(int k, string mess) {
 	system("cls");
@@ -238,16 +230,16 @@ void showWarning(int k, string mess) {
 
 	cout << setw(22) << "|" << setw(5) << "";
 	if (k == 1) {
-		SetColor(6, 0);
+		SetColor(11, 0);
 	}
 	cout << "YES";
-	SetColor(0, 14);
+	SetColor(0, 11);
 	cout << setw(15) << "";
 	if (k == 2) {
-		SetColor(6, 0);
+		SetColor(11, 0);
 	}
 	cout  << "NO";
-	SetColor(0, 14);
+	SetColor(0, 11);
 	cout << setw(6) << "|" << endl;
 
 	cout << setw(22) << "|" << setw(31) << "|" << endl;
@@ -259,7 +251,7 @@ void showProduct() {
 	HangHoa hangHoa[50];
 	layDS<HangHoa>(nHH, hangHoa, "HangHoa.txt");
 	system("cls");
-	SetColor(0, 14);
+	SetColor(0, 11);
 	cout << setw(23) << "" << setfill('*') << setw(34) << "*" << setfill(' ') << endl;
 	cout << setw(57) << "*                                *" << endl;
 
@@ -345,7 +337,6 @@ bool regisOrder1(int& n, string* maHang, int* soLuong) {
 		HangHoa hangHoa[100];
 		int nHH = 0;
 		layDS<HangHoa>(nHH, hangHoa, "HangHoa.txt");
-		SetColor(0, 14);
 		cout << setw(59) << right << "|----------> NHAP DON HANG <---------|\n\n\n";
 		cout << setw(21) << "" << setfill('*') << setw(32) << "*" << setfill(' ') << endl;
 		string mH;
@@ -425,7 +416,6 @@ bool regisOrder1(int& n, string* maHang, int* soLuong) {
 }
 bool regisOrder2(string& tenKH, string& diachiKH, string& soDT, string& ngayDat) {
 	system("cls");
-	SetColor(0, 14);
 	cout << setw(59) << right << "|----------> NHAP THONG TIN <---------|\n\n\n";
 	cout << setw(21) << "" << setfill('*') << setw(32) << "*" << setfill(' ') << endl;
 	cout << setw(39) << "Ten khach hang: ";
@@ -563,7 +553,6 @@ bool handlingOrder(int& nDH, DonHang* donHang, int& nHH, HangHoa* hangHoa, int& 
 
 void regisProduct(int& nHH, HangHoa* hangHoa, string& maHang, string& tenHang, string& noiSanXuat, string& mauSac, float& giaBan, string& ngayNhapKho, int& soLuong) {
 	system("cls");
-	SetColor(0, 14);
 	cout << setw(59) << right << "|----------> NHAP THONG TIN <---------|\n\n\n";
 	cout << setw(21) << "" << setfill('*') << setw(32) << "*" << setfill(' ') << endl;
 	cout << setw(32) << "Ma hang: ";

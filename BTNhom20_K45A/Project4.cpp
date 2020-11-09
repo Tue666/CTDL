@@ -6,6 +6,13 @@
 #include <cstdlib>
 #include <Windows.h>
 using namespace std;
+void SetColor(int backgound_color, int text_color)
+{
+	HANDLE hStdout = GetStdHandle(STD_OUTPUT_HANDLE);
+
+	int color_code = backgound_color * 16 + text_color;
+	SetConsoleTextAttribute(hStdout, color_code);
+}
 string catChuoi(string s, int vitri) {
 	return s.substr(vitri, s.length() - vitri);
 }
@@ -90,7 +97,7 @@ int main() {
 				case 2:
 				{
 					system("cls");
-					SetColor(0, 14);
+					SetColor(0, 11);
 					string productName;
 					cout << "Nhap ten hang hoa can tim: ";
 					getline(cin, productName);
@@ -105,6 +112,7 @@ int main() {
 					string* maHang = new string[20];
 					string tenKH, diachiKH, soDT, ngayDat;
 					int* soLuong = new int[20];
+					SetColor(0, 11);
 					if (regisOrder1(n, maHang, soLuong)) {
 						if (regisOrder2(tenKH, diachiKH, soDT, ngayDat)) {
 							addOrder(n, maHang, soLuong, tenKH, diachiKH, soDT, ngayDat) ? cout << "\nDon dang cho xu ly. Nhan ESC de quay lai.\n" : cout << "\nDat hang khong thanh cong. Nhan ESC de quay lai.\n";
@@ -163,10 +171,9 @@ int main() {
 											HangHoa hangHoa[100];
 											int nHH = 0;
 											layDS<HangHoa>(nHH, hangHoa, "HangHoa.txt");
+											SetColor(0, 11);
 											if (handlingOrder(nDH, donHang, nHH, hangHoa, dem)) {
-												SetColor(0, 14);
 												cout << "Xu ly thanh cong " << dem << " don hang. Nhan ESC de quay lai.\n" << endl;
-												SetColor(0, 7);
 											}
 											break;
 										}
@@ -211,6 +218,7 @@ int main() {
 															float giaBan;
 															int soLuong;
 															layDS<HangHoa>(nHH, hangHoa, "HangHoa.txt");
+															SetColor(0, 11);
 															regisProduct(nHH, hangHoa, maHang, tenHang, noiSanXuat, mauSac, giaBan, ngayNhapKho, soLuong);
 															if (addProduct(maHang, tenHang, noiSanXuat, mauSac, giaBan, ngayNhapKho, soLuong)) {
 																cout << "\nThem hang hoa thanh cong. Nhan ESC de quay lai.\n" << endl;
@@ -223,7 +231,7 @@ int main() {
 															int nHH = 0;
 															layDS<HangHoa>(nHH, hangHoa, "HangHoa.txt");
 															string maHang;
-															SetColor(0, 14);
+															SetColor(0, 11);
 															cout << "Nhap ma hang can xoa: ";
 															cin >> maHang;
 															if (!checkExistByIDProduct(maHang, nHH, hangHoa)) {
@@ -242,7 +250,7 @@ int main() {
 															int nHH = 0;
 															layDS<HangHoa>(nHH, hangHoa, "HangHoa.txt");
 															string maHang;
-															SetColor(0, 14);
+															SetColor(0, 11);
 															cout << "\nNhap ma hang can thay doi so luong: ";
 															cin >> maHang;
 															if (!checkExistByIDProduct(maHang, nHH, hangHoa)) {
